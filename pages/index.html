@@ -53,14 +53,14 @@
                 </button>
 				
 				<li class="navbar-brand">
-					<div class="input-group custom-search-form">
-						<input class="form-control" placeholder="Search..." type="text">
+					<form class="input-group custom-search-form">
+						<input class="form-control" placeholder="Enter User ID..." type="text" id="userid">
 							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">
+								<button class="btn btn-default" type="submit">
 									<i class="fa fa-search"></i>
 								</button>
 							</span>
-					</div>
+					</form>
 					<!-- /input-group -->
 				</li>
 				
@@ -1082,11 +1082,15 @@
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
-    $(document).ready(function() {
-        $('table.table').DataTable({
-                "responsive": true,
-                "paging": false
-        });
+    $('#input-group').on('submit','form.remember',function() {
+		var local = this.value
+		
+			$('table.table').DataTable({
+					table.search(local).draw();
+					"responsive": true,
+					"paging": false
+			});
+		
     });
     </script>
 
