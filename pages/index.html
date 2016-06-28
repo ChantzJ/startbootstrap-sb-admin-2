@@ -282,7 +282,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover display" id="table1">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -328,7 +328,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table display" id="table2">
+                                <table class="table" id="dataTables-example">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -374,7 +374,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table display" id="table3">
+                                <table class="table" id="dataTables-example">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -423,7 +423,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="dataTable_wrapper">
-                                <table width="100%" class="table table-striped table-bordered table-hover display" id="table4">
+                                <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
                                             <th>Rendering engine</th>
@@ -855,7 +855,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table table-striped display" id="table5">
+                                <table class="table table-striped">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -901,7 +901,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="table-responsive table-bordered">
-                                <table class="table display" id="table6">
+                                <table class="table">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -950,7 +950,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table table-hover display" id="table7">
+                                <table class="table table-hover">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -996,7 +996,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table display" id="table8">
+                                <table class="table">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -1068,10 +1068,12 @@
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
     $(document).ready(function() {
-        $('#table4').DataTable({
-        responsive: true
-	"paging": false
+        $('#dataTables-example').DataTable({
+                responsive: true
         });
+		$('table-responsive').DataTable({
+				resposive: true
+		});
     });
     </script>
 
