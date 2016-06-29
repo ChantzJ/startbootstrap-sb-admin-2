@@ -1086,9 +1086,7 @@
     var ex = document.getElementById("#idtext").value;
     var tableEx = $('table.table').DataTable();
     
-    $("#userid").on('submit','form.remember',function(e) {
-    	e.preventDefault();
-    	
+    $("#userid").on('submit','form.remember',function() {
     	//var x = $('#idtext').val();
 	tableEx
 		.search( ex )
