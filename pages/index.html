@@ -1086,7 +1086,7 @@
     var tableEx = $('table.table').DataTable();
     $("#userid").on('submit','form.remember',function() {
 	tableEx
-		.search( this.value )
+		.search( this.value() )
 		.draw();
 		
 		//var tableEx = $('table.table').DataTable();
