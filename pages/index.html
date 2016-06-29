@@ -1083,15 +1083,15 @@
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
 	
-    //var x = document.getElementById("#userid");
-    
+    var ex = document.getElementById("#idtext").value;
     var tableEx = $('table.table').DataTable();
-    $("#userid").submit('form.remember',function(e) {
+    
+    $("#userid").on('submit','form.remember',function(e) {
     	e.preventDefault();
     	
-    	var x = $('#idtext').val();
+    	//var x = $('#idtext').val();
 	tableEx
-		.search( x )
+		.search( ex )
 		.draw();
 		
 		//var tableEx = $('table.table').DataTable();
