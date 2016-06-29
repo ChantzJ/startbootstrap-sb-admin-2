@@ -1083,12 +1083,11 @@
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
 	
-	function submitFunction() {
-	var x = document.getElementById("#userid");
+    var x = document.getElementById("#userid");
     var tableEx = $('table.table').DataTable();
     
-    //$("#userid").on('submit','form.remember',function(e) {
-    //	e.preventDefault();
+    $("#userid").submit('form.remember',function(e) {
+    	e.preventDefault();
     	var x = $('#idtext').val();
 	tableEx
 		.search( x )
