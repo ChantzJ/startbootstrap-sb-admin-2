@@ -1082,14 +1082,21 @@
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
+    
+    var tableEx = $('table.table').DataTable();
     $(".custom-search-form").on('submit','form.remember',function() {
-	var local = this.value;
+	tableEx
+		.search( this.value )
+		.draw();
 		
+		//var tableEx = $('table.table').DataTable();
+		/*
 	$('table.table').DataTable({
 		"search": var,
 		"responsive": true,
 		"paging": false
 	});
+	*/
 		
     });
     </script>
