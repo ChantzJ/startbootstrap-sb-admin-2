@@ -1082,27 +1082,12 @@
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
-    var tableEx = $('table.table').DataTable();	
-    var ex = document.getElementById("#idtext").value();
-
-    
-    $("#userid").on('submit','form.remember',function() {
-    	//var x = $('#idtext').val();
-	tableEx
-		.search( ex )
-		.draw();
-		
-		//var tableEx = $('table.table').DataTable();
-		/*
-	$('table.table').DataTable({
-		"search": var,
-		"responsive": true,
-		"paging": false
-	});
-	*/
-		
-    //});
-	}
+    $(document).ready(function() {
+        $('table.table').DataTable({
+                "responsive": true,
+                "paging": false
+        });
+    });
     </script>
 
 </body>
