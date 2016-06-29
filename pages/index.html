@@ -56,7 +56,7 @@
 					<form class="input-group custom-search-form" id="userid">
 						<input class="form-control" placeholder="Enter User ID..." type="text">
 							<span class="input-group-btn">
-								<button class="btn btn-default" form="userid" type="submit">
+								<button class="btn btn-default" form="userid" type="submit" value="Submit">
 									<i class="fa fa-search"></i>
 								</button>
 							</span>
@@ -1082,7 +1082,7 @@
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
-    
+    var x = document.getElementById("userid");
     var tableEx = $('table.table').DataTable();
     $("#userid").on('submit','form.remember',function() {
 	tableEx
