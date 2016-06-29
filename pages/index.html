@@ -54,7 +54,7 @@
 				
 				<li class="navbar-brand">
 					<form class="input-group custom-search-form" id="userid">
-						<input class="form-control" placeholder="Enter User ID..." type="text">
+						<input class="form-control" placeholder="Enter User ID..." type="text" id="idtext">
 							<span class="input-group-btn">
 								<button class="btn btn-default" form="userid" type="submit" value="Submit">
 									<i class="fa fa-search"></i>
@@ -1082,11 +1082,14 @@
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
-    var x = document.getElementById("userid");
+    //var x = document.getElementById("#userid");
     var tableEx = $('table.table').DataTable();
-    $("#userid").on('submit','form.remember',function() {
+    
+    $("#userid").on('submit','form.remember',function(e) {
+    	e.preventDefault();
+    	var x = $('#idtext').val();
 	tableEx
-		.search( this.value() )
+		.search( x )
 		.draw();
 		
 		//var tableEx = $('table.table').DataTable();
